@@ -43,8 +43,7 @@ bool Subject::addStudent(Student *stud)
 {
     if(stud_index < stud_max)
     {
-        stud_arr[stud_index] = stud;
-        stud_index++;
+        stud_arr[stud_index++] = stud;
         return true;
     }
     return false;
@@ -54,10 +53,10 @@ Student Subject::check(int index, bool &logic)
 {
         if(index<=stud_index)
         {
-            logic=true;
-            return *(stud_arr[index-1]);
+            logic = true;
+            return *(stud_arr[index - 1]);
         }
-        logic=false;
+        logic = false;
         Student x;
         return x;
     }
