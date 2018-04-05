@@ -4,10 +4,12 @@ using namespace std;
 
 class Polygon
 {
+public:
     struct Point
     {
         double x, y;
     };
+private:
     Point **points;
     unsigned int count, size;
 
@@ -72,12 +74,28 @@ public:
             delete points[i];
         delete points;
     }
-};
 
+    void add(Point point) //trzeba zrobić jeszcze dodawanie do tablicy tej zmiennej typu Point
+    { // na wejściówce powinna być głównie dynamiczna alokacja pamięci, czy coś takiego
+        Point **pointsCpy = points;
+        size += 4;
+        points = new Point*[size];
+        for(int i = 0; i < count; i++)
+            points[i] = pointsCpy[i];
+        delete pointsCpy;
+    }
+};
+//zrób metdę przyjmującą jako argument indeks tablicy punktów, zwracającą referencję na punkt we wskazanej komórce
+//patrz komentarz przy void add(Point point)
 int main()
 {
-    Polygon polygon;
-    Polygon polygon2(polygon);
+    Polygon *polygon = new Polygon();
+    cout << polygon->getSize() << endl;
+    Polygon::Point p;
+    p.x = 4;
+    p.y = 8;
+    polygon->add(p);
+    cout << polygon->getSize() << endl;
 
     return 0;
 }
