@@ -72,22 +72,6 @@ public:
             delete points[i];
         delete points;
     }
-
-
-
-
-
-
-
-
-
-    /*
-    void printData()
-    {
-        cout << p->x << ", " << p->y << endl;
-    }
-    */
-
 };
 
 int main()
