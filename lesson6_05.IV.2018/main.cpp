@@ -85,8 +85,18 @@ public:
         delete pointsCpy;
     }
 };
-//zrób metdę przyjmującą jako argument indeks tablicy punktów, zwracającą referencję na punkt we wskazanej komórce
+
+Point *getPoint(int index)
+{
+    if(index < count)
+        return points[index];
+    else
+        return NULL;
+}
+
 //patrz komentarz przy void add(Point point)
+//z zadania 2 do zablokowanego konstruktora kopiującego - P.D.
+
 int main()
 {
     Polygon *polygon = new Polygon();
