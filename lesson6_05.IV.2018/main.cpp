@@ -75,8 +75,8 @@ public:
         delete points;
     }
 
-    void add(Point point) //trzeba zrobić jeszcze dodawanie do tablicy tej zmiennej typu Point
-    { // na wejściówce powinna być głównie dynamiczna alokacja pamięci, czy coś takiego
+    void add(Point point)
+    {
         Point **pointsCpy = points;
         size += 4;
         points = new Point*[size];
@@ -93,9 +93,6 @@ Point *getPoint(int index)
     else
         return NULL;
 }
-
-//patrz komentarz przy void add(Point point)
-//z zadania 2 do zablokowanego konstruktora kopiującego - P.D.
 
 int main()
 {
