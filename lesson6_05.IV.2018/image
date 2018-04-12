@@ -1,0 +1,10 @@
+class Image
+{
+    polygon_obj *arr[10];
+    unsigned int polygons;
+    
+    Image()
+    {
+        polygons = 0;
+    };
+};
