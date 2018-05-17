@@ -28,10 +28,27 @@ public:
     }
 };
 
+template<typename Typ> Typ test(int l1, double l2)
+{
+    cout<<"ogolna"<<endl;
+    if(double(l1) > l2)
+        return l1;
+    else
+        return l2;
+}
+
+template<> bool test<bool>(int l1, double l2)
+{
+    cout<<"specjalizowana"<<endl;
+    return(double(l1) > l2);
+}
+
 int main()
 {
     Klasa<int,double, 200> klasa(4,4,5);
     cout<<klasa.verify<int>()<<endl;
     cout<klasa.verify<double>()<<endl;
     cout<<klasa.licz()<<endl;
+    cout<<test<double(4,5,5)<<endl;
+    cout<<test<bool>(4,5,5)<<endl;
 }
