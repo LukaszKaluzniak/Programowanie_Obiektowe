@@ -43,6 +43,16 @@ template<> bool test<bool>(int l1, double l2)
     return(double(l1) > l2);
 }
 
+void dedukcja(int a)
+{
+    cout << "dedukcja int " <<a<<endl;
+}
+
+template<typename T> void dedukcja(T a)
+{
+    cout << "dedukcja template " << a<<endl;
+};
+
 int main()
 {
     Klasa<int,double, 200> klasa(4,4,5);
@@ -51,4 +61,7 @@ int main()
     cout<<klasa.licz()<<endl;
     cout<<test<double(4,5,5)<<endl;
     cout<<test<bool>(4,5,5)<<endl;
+    dedukcja(1);
+    cout<<endl;
+    dedukcja<int>(1);
 }
