@@ -22,6 +22,8 @@ public:
             return l2;
     }
     
+    //T2 sum(); coś takiego?
+    
     int licz()
     {
         return int(l1) * wsp;
