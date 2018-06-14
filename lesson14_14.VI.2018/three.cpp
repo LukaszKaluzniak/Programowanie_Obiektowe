@@ -12,7 +12,7 @@ public:
     }
     int callbackFunction(int i)
     {
-        cout << "Vallee input " << endl;
+        cout << "Callee input " << endl;
         return this->i * i;
     }
     void seti(int i)
