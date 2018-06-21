@@ -42,9 +42,9 @@ int main(int argc, char *argv[])
     shared_ptr<Klasa> ptr1(new Klasa);
     shared_ptr<Klasa> ptr2(ptr1);
     shared_ptr<Klasa> ptr3(ptr1);
-    cout<<ptr1->test(3)<<endl;
-    cout<<ptr2->test(8)<<endl;
-    cout<<ptr3->test(2)<<endl;
+    cout << ptr1->test(3) << endl;
+    cout << ptr2->test(8) << endl;
+    cout << ptr3->test(2) << endl;
     cout << "KONIEC" << endl;
     return 0;
 }
