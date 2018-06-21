@@ -30,13 +30,6 @@ public:
 
 int Klasa::nextId = 0;
 
-/*
-void ftestowa(shared_ptr<Klasa> ptrf)
-{
-    cout<<ptrf->test(2)<<endl;
-}
-*/
-
 int main(int argc, char *argv[])
 {
     shared_ptr<Klasa> ptr1(new Klasa);
